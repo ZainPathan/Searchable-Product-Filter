@@ -1,0 +1,12 @@
+#root {
+    margin: auto;
+}
+
+table {
+    border: 1px solid blue;
+    margin: auto;
+}
+
+h1, h2, h3, h4, p {
+    text-align: center;
+}

@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './ProductDetails.css';
 
 class ProductCategoryRow extends React.Component {
     render() {
@@ -120,6 +121,19 @@ class SearchBar extends React.Component {
     }
 }
 
+class FragmentSample extends React.Component {
+    render() {
+        return (
+            <React.Fragment>
+                <h1>Searchable Product Details</h1>
+                <h3>This text is written inside a Fragment</h3>
+                <p><strong>Fragments</strong> let you group a list of 
+                children without adding extra nodes to the DOM.</p>
+            </React.Fragment>
+        );
+    }        
+}
+
 class FilterableProductTable extends React.Component {
     constructor(props) {
         super(props);
@@ -158,6 +172,8 @@ class FilterableProductTable extends React.Component {
                     filterText={this.state.filterText}
                     inStockOnly={this.state.inStockOnly}
                 />
+                <br/>
+                <FragmentSample/>
             </div>
         );
     }
