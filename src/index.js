@@ -23,6 +23,7 @@ import MultipleContextParentApp from './context/multiple-contexts/MultipleContex
 import ContextWHOCApp from './context/context-with-hoc/ContextWHOCApp';
 import ParentComponent from './portals/ParentComponent';
 import TooltipApp from "./portals/portals-tooltip-ex/TooltipApp";
+import CounterExampleWFRefs from './forward-refs/CounterHOC';
 
 const PRODUCTS = [
     {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
@@ -34,7 +35,7 @@ const PRODUCTS = [
 ];
 
 ReactDOM.render(
-    <TooltipApp />,
+    <CounterExampleWFRefs />,
     document.getElementById('root')
 );
 
@@ -171,5 +172,12 @@ ReactDOM.render(
 ReactDOM.render(
     <ParentComponent />,
     document.getElementById('app-root')
+);
+*/
+
+/* Portal Tooltip example
+ReactDOM.render(
+    <TooltipApp />,
+    document.getElementById('root')
 );
 */
