@@ -24,6 +24,8 @@ import ContextWHOCApp from './context/context-with-hoc/ContextWHOCApp';
 import ParentComponent from './portals/ParentComponent';
 import TooltipApp from "./portals/portals-tooltip-ex/TooltipApp";
 import CounterExampleWFRefs from './forward-refs/CounterHOC';
+import CustomTextInput from './forwarding-refs-ex1/Ref';
+import CustomHOCTextInput from './forwarding-refs-ex1/RefHOC';
 
 const PRODUCTS = [
     {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
@@ -35,7 +37,14 @@ const PRODUCTS = [
 ];
 
 ReactDOM.render(
-    <CounterExampleWFRefs />,
+    <React.Fragment>
+        <h2>Forwarding Refs sample</h2>
+        {/* <CounterExampleWFRefs /> */}
+        <CustomTextInput />
+        <br/>
+        <hr/>
+        <CustomHOCTextInput />
+    </React.Fragment>,
     document.getElementById('root')
 );
 
