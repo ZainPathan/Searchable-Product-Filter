@@ -1,5 +1,6 @@
 import React from 'react';
 
+//Forward Ref
 const TextInput = ( {forwardedRef, children, ...rest} ) => (
     <div>
         <input ref={forwardedRef} {...rest} />
@@ -7,6 +8,7 @@ const TextInput = ( {forwardedRef, children, ...rest} ) => (
     </div>
 );
 
+//HOC
 const Input = (InputComponent) => {
     const forwardRef = (props, ref) => {
         const onType = () => {
@@ -21,6 +23,7 @@ const Input = (InputComponent) => {
     return React.forwardRef(forwardRef);
 };
 
+//HOC Creation
 const InputField = Input(TextInput);
 
 class CustomHOCTextInput extends React.Component {
@@ -38,6 +41,7 @@ class CustomHOCTextInput extends React.Component {
         const inputRef = React.createRef();
         return (
             <div>
+                {/* Calling HOC Component */}
                 <InputField ref={inputRef} onTextChange={this.handleOnTextChange.bind(this)}/>
                 <br />
                 <p>{this.state.textInputValue}</p>
