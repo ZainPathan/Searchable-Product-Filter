@@ -7,10 +7,11 @@ class FileInput extends React.Component {
         this.fileInput = React.createRef();        
     }
 
-    handleSubmit(e) {
+    handleSubmit = (e) => {
         e.preventDefault();
+        console.log(this.fileInput.current.files[0].name);
         alert(
-            'Selected file - ${this.fileInput.current.files[0].name}'
+            `Selected file - ${this.fileInput.current.files[0].name}`
         );
     }
 
